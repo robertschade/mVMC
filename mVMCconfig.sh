@@ -100,8 +100,8 @@ EOF
         cat > src/make.sys <<EOF
 CC = mpiicc
 F90 = mpiifort
-CFLAGS = -O3 -xHost -qopenmp -no-prec-div -Wno-unknown-pragmas -I \${MKLROOT}/include
-FFLAGS = -O3 -xHost -qopenmp -implicitnone
+CFLAGS = -O3 -xHost -no-prec-div -Wno-unknown-pragmas -I \${MKLROOT}/include
+FFLAGS = -O3 -xHost -implicitnone
 LIBS = -qopenmp -L \${MKLROOT}/lib/intel64 -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lmkl_blacs_intelmpi_lp64 -lpthread -lm -ldl
 SFMTFLAGS = -no-ansi-alias -DHAVE_SSE2
 EOF
@@ -109,8 +109,8 @@ EOF
         cat > src/make.sys <<EOF
 CC = mpiicc
 F90 = mpiifort
-CFLAGS = -O3 -pg -xHost -qopenmp -no-prec-div -Wno-unknown-pragmas -I \${MKLROOT}/include
-FFLAGS = -O3 -pg -xHost -qopenmp -implicitnone
+CFLAGS = -O3 -pg -xHost -no-prec-div -Wno-unknown-pragmas -I \${MKLROOT}/include
+FFLAGS = -O3 -pg -xHost -implicitnone
 LIBS = -qopenmp -L \${MKLROOT}/lib/intel64 -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lmkl_blacs_intelmpi_lp64 -lpthread -lm -ldl
 SFMTFLAGS = -no-ansi-alias -DHAVE_SSE2
 EOF
@@ -118,8 +118,8 @@ EOF
         cat > src/make.sys <<EOF
 CC = mpiicc
 F90 = mpiifort
-CFLAGS = -O3 -g -xCORE-AVX2 -qopenmp -no-prec-div -Wno-unknown-pragmas -I \${MKLROOT}/include
-FFLAGS = -O3 -g -xCORE-AVX2 -qopenmp -implicitnone
+CFLAGS = -O3 -g -xCORE-AVX2 -no-prec-div -Wno-unknown-pragmas -I \${MKLROOT}/include
+FFLAGS = -O3 -g -xCORE-AVX2 -implicitnone
 LIBS = -qopenmp -L \${MKLROOT}/lib/intel64 -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lmkl_blacs_intelmpi_lp64 -lpthread -lm -ldl
 SFMTFLAGS = -no-ansi-alias -DHAVE_SSE2
 EOF
